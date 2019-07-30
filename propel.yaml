@@ -1,0 +1,22 @@
+# An example of Propel configuration file in yaml
+
+propel:
+  database:
+      connections:
+          lazygram:
+              adapter: sqlite
+              classname: Propel\Runtime\Connection\DebugPDO
+              dsn: sqlite://home/mezka/propel-orm-spike/lazygram.db
+              user: root
+              password:
+              attributes:
+              settings:
+                  charset: utf8
+  runtime:
+      defaultConnection: lazygram
+      connections:
+          - lazygram
+  generator:
+      defaultConnection: lazygram
+      connections:
+          - lazygram

@@ -1,5 +1,8 @@
 {
     "require": {
         "propel/propel": "~2.0@dev"
+    },
+    "scripts": {
+        "propel": "vendor/bin/propel"
     }
 }

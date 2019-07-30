@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="lazygram" defaultIdMethod="native">
+  <table name="follows" phpName="Follows">
+    <column name="id" type="integer" required="true" primaryKey="true"/>
+    <behavior name="timestampable" />
+  </table>
+  <table name="liked_medias" phpName="LikedMedias">
+    <column name="id" type="integer" required="true" primaryKey="true"/>
+    <column name="profile_id" type="integer" required="true"/>
+    <foreign-key foreignTable="follows" phpName="Follows" refPhpName="LikedMedias">
+      <reference local="profile_id" foreign="id"/>
+    </foreign-key>
+  </table>
+</database>
